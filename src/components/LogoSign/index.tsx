@@ -99,7 +99,7 @@ function Logo() {
 
   return (
     <TooltipWrapper title="Personal Finance App" arrow>
-      <LogoWrapper to="/overview">
+      <LogoWrapper to="/dashboards/crypto">
         <Badge
           sx={{
             '.MuiBadge-badge': {
