@@ -98,10 +98,7 @@ function Logo() {
   const theme = useTheme();
 
   return (
-    <TooltipWrapper
-      title="Tokyo Free White React Typescript Admin Dashboard"
-      arrow
-    >
+    <TooltipWrapper title="Personal Finance App" arrow>
       <LogoWrapper to="/overview">
         <Badge
           sx={{
