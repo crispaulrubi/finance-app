@@ -12,10 +12,8 @@ function App() {
 
   return (
     <ThemeProvider>
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <CssBaseline />
-        {content}
-      </LocalizationProvider>
+      <CssBaseline />
+      {content}
     </ThemeProvider>
   );
 }
