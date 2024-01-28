@@ -14,6 +14,10 @@ const Loader = (Component) => (props) =>
     </Suspense>
   );
 
+// Login
+
+const Login = Loader(lazy(() => import('src/content/login')));
+
 // Dashboards
 
 const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
@@ -88,7 +92,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Navigate to="dashboards" replace />
+        element: <Login />
       },
       {
         path: 'status',
