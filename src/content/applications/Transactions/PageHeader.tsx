@@ -1,5 +1,7 @@
-import { Typography, Button, Grid } from '@mui/material';
+import { NavLink as RouterLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
+import { Typography, Button, Grid } from '@mui/material';
 import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
 
 function PageHeader() {
@@ -22,6 +24,8 @@ function PageHeader() {
           sx={{ mt: { xs: 2, md: 0 } }}
           variant="contained"
           startIcon={<AddTwoToneIcon fontSize="small" />}
+          component={RouterLink}
+          to="/management/transactions/create"
         >
           Create transaction
         </Button>
