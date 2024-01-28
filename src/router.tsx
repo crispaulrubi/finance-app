@@ -79,7 +79,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Crypto />
+        element: <Navigate to="dashboards" replace />
       },
       {
         path: 'status',
