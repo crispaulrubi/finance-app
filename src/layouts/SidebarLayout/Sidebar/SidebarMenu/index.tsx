@@ -364,7 +364,7 @@ function getExtraSidebarPages(
 
 function SidebarMenu() {
   const { closeSidebar } = useContext(SidebarContext);
-  const currentRole: Roles = Roles.Admin;
+  const currentRole: Roles = Roles.User;
 
   return (
     <>
