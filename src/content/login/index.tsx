@@ -1,4 +1,4 @@
-import { Box, Container, Card } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 
 import { styled } from '@mui/material/styles';
@@ -13,7 +13,7 @@ const OverviewWrapper = styled(Box)(
 `
 );
 
-function Overview() {
+function Login() {
   return (
     <OverviewWrapper>
       <Helmet>
@@ -28,4 +28,4 @@ function Overview() {
   );
 }
 
-export default Overview;
+export default Login;
