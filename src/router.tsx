@@ -23,6 +23,7 @@ const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
 const Messenger = Loader(
   lazy(() => import('src/content/applications/Messenger'))
 );
+const Wallets = Loader(lazy(() => import('src/content/applications/Wallets')));
 const Transactions = Loader(
   lazy(() => import('src/content/applications/Transactions'))
 );
@@ -140,6 +141,10 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <Navigate to="transactions" replace />
+      },
+      {
+        path: 'wallets',
+        element: <Wallets />
       },
       {
         path: 'transactions',
