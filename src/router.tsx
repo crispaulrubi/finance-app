@@ -58,7 +58,7 @@ const Avatars = Loader(
 const Cards = Loader(lazy(() => import('src/content/pages/Components/Cards')));
 const Forms = Loader(lazy(() => import('src/content/pages/Components/Forms')));
 const TransactionForms = Loader(
-  lazy(() => import('src/content/applications/Forms'))
+  lazy(() => import('src/content/applications/Forms/Transactions'))
 );
 
 // Status
