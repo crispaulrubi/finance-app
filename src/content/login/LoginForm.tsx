@@ -48,7 +48,7 @@ function LoginForm() {
       alignItems="stretch"
       spacing={3}
     >
-      <Grid item xs={11} md={6}>
+      <Grid item xs={11} md={5}>
         <Card>
           <CardContent>
             <Grid
