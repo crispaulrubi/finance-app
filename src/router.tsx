@@ -24,9 +24,17 @@ const Messenger = Loader(
   lazy(() => import('src/content/applications/Messenger'))
 );
 const Wallets = Loader(lazy(() => import('src/content/applications/Wallets')));
+const WalletForms = Loader(
+  lazy(() => import('src/content/applications/Forms/Wallets'))
+);
+
 const Transactions = Loader(
   lazy(() => import('src/content/applications/Transactions'))
 );
+const TransactionForms = Loader(
+  lazy(() => import('src/content/applications/Forms/Transactions'))
+);
+
 const UserProfile = Loader(
   lazy(() => import('src/content/applications/Users/profile'))
 );
@@ -57,9 +65,6 @@ const Avatars = Loader(
 );
 const Cards = Loader(lazy(() => import('src/content/pages/Components/Cards')));
 const Forms = Loader(lazy(() => import('src/content/pages/Components/Forms')));
-const TransactionForms = Loader(
-  lazy(() => import('src/content/applications/Forms/Transactions'))
-);
 
 // Status
 
@@ -144,7 +149,16 @@ const routes: RouteObject[] = [
       },
       {
         path: 'wallets',
-        element: <Wallets />
+        children: [
+          {
+            path: '',
+            element: <Wallets />
+          },
+          {
+            path: 'create',
+            element: <WalletForms />
+          }
+        ]
       },
       {
         path: 'transactions',

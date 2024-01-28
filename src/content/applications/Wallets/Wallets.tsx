@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import {
   Card,
   Grid,
@@ -82,6 +83,8 @@ function Wallets() {
           <Tooltip arrow title="Click to add a new wallet">
             <CardAddAction>
               <CardActionArea
+                component={NavLink}
+                to="/management/wallets/create"
                 sx={{
                   px: 1
                 }}
