@@ -86,6 +86,7 @@ function LoginForm() {
                 <div>
                   <TextField
                     fullWidth
+                    required
                     id="password"
                     label="Password"
                     autoComplete="current-password"
