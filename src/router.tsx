@@ -83,11 +83,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Overview />
-      },
-      {
-        path: 'overview',
-        element: <Navigate to="/" replace />
+        element: <Crypto />
       },
       {
         path: 'status',
