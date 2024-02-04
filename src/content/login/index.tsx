@@ -17,7 +17,7 @@ function Login() {
   return (
     <OverviewWrapper>
       <Helmet>
-        <title>Tokyo Free White React Typescript Admin Dashboard</title>
+        <title>Personal Finance App</title>
       </Helmet>
       <Container maxWidth="lg">
         <Box display="flex" justifyContent="center" py={5} alignItems="center">
