@@ -8,12 +8,10 @@ import App from 'src/App';
 import { SidebarProvider } from 'src/contexts/SidebarContext';
 import * as serviceWorker from 'src/serviceWorker';
 
-import dotenv from 'dotenv';
-
-dotenv.config();
+import env from 'react-dotenv';
 
 ReactDOM.render(
-  <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
+  <GoogleOAuthProvider clientId={env.GOOGLE_CLIENT_ID}>
     <HelmetProvider>
       <SidebarProvider>
         <BrowserRouter>
