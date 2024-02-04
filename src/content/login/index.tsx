@@ -14,11 +14,10 @@ const OverviewWrapper = styled(Box)(
 );
 
 function Login() {
-  // test commit
   return (
     <OverviewWrapper>
       <Helmet>
-        <title>Personal Finance App</title>
+        <title>Test</title>
       </Helmet>
       <Container maxWidth="lg">
         <Box display="flex" justifyContent="center" py={5} alignItems="center">
