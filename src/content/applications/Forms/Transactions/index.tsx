@@ -1,22 +1,51 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageTitle from 'src/components/PageTitle';
+import './styles.css';
 
-import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import {
-  Button,
   Container,
   Grid,
   Card,
   CardHeader,
   CardContent,
-  Divider
+  Divider,
+  MenuItem,
+  Box,
+  TextField
 } from '@mui/material';
+import LoadingButton from '@mui/lab/LoadingButton';
+import SendIcon from '@mui/icons-material/Send';
+import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import Footer from 'src/components/Footer';
 
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+const tags = [
+  {
+    value: 'needs',
+    label: 'NEEDS'
+  },
+  {
+    value: 'wants',
+    label: 'WANTS'
+  },
+  {
+    value: 'savings',
+    label: 'SAVINGS'
+  }
+];
 
 function Forms() {
+  const [tag, setTag] = useState('needs');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = () => {
+    setLoading(true);
+  };
+
+  const handleChange = (event) => {
+    setTag(event.target.value);
+  };
+
   return (
     <>
       <Helmet>
@@ -69,20 +98,43 @@ function Forms() {
                       label="Description"
                       placeholder="Record Description..."
                     />
+                    <TextField
+                      id="outlined-select-currency"
+                      select
+                      required
+                      label="Select Tag"
+                      value={tag}
+                      onChange={handleChange}
+                    >
+                      {tags.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                          {option.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
                   </div>
                 </Box>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <Button
+            <LoadingButton
               size="large"
-              sx={{ margin: 1 }}
+              style={
+                loading
+                  ? {
+                      border: 'solid'
+                    }
+                  : {}
+              }
+              onClick={handleSubmit}
+              endIcon={<SendIcon />}
+              loading={loading}
+              loadingPosition="end"
               variant="contained"
-              color="primary"
             >
-              Submit
-            </Button>
+              <span>Submit</span>
+            </LoadingButton>
           </Grid>
         </Grid>
       </Container>
