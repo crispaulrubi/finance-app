@@ -1,7 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import PageTitle from 'src/components/PageTitle';
-
-import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import {
   Button,
   Container,
@@ -9,12 +6,15 @@ import {
   Card,
   CardHeader,
   CardContent,
-  Divider
+  Divider,
+  Box,
+  TextField
 } from '@mui/material';
-import Footer from 'src/components/Footer';
 
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import Footer from 'src/components/Footer';
+import PageTitle from 'src/components/PageTitle';
+import PageTitleWrapper from 'src/components/PageTitleWrapper';
+import SubmitButton from '../Common/SubmitButton';
 
 function Forms() {
   return (
@@ -75,14 +75,7 @@ function Forms() {
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <Button
-              size="large"
-              sx={{ margin: 1 }}
-              variant="contained"
-              color="primary"
-            >
-              Submit
-            </Button>
+            <SubmitButton />
           </Grid>
         </Grid>
       </Container>

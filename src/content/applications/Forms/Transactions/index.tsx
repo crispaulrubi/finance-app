@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageTitle from 'src/components/PageTitle';
-import './styles.css';
+import SubmitButton from '../Common/SubmitButton';
 
 import {
   Container,
@@ -36,11 +36,6 @@ const tags = [
 
 function Forms() {
   const [tag, setTag] = useState('needs');
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = () => {
-    setLoading(true);
-  };
 
   const handleChange = (event) => {
     setTag(event.target.value);
@@ -118,23 +113,7 @@ function Forms() {
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <LoadingButton
-              size="large"
-              style={
-                loading
-                  ? {
-                      border: 'solid'
-                    }
-                  : {}
-              }
-              onClick={handleSubmit}
-              endIcon={<SendIcon />}
-              loading={loading}
-              loadingPosition="end"
-              variant="contained"
-            >
-              <span>Submit</span>
-            </LoadingButton>
+            <SubmitButton />
           </Grid>
         </Grid>
       </Container>
