@@ -62,7 +62,9 @@
     ]
   },
   "react-dotenv": {
-    "whitelist": ["API_URL"]
+    "whitelist": [
+      "API_URL"
+    ]
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.62.0",
